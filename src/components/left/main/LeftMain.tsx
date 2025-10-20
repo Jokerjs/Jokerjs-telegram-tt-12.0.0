@@ -240,17 +240,18 @@ const LeftMain: FC<OwnProps> = ({
           }
         }}
       </Transition>
-      {shouldRenderUpdateButton && (
-        <Button
-          fluid
-          badge
-          className={buildClassName('btn-update', updateButtonClassNames)}
-          onClick={handleUpdateClick}
-          isLoading={isTauriUpdateDownloading}
-        >
-          {lang('lng_update_telegram')}
-        </Button>
-      )}
+      {/*TODO: 升级应用*/}
+      {/*{shouldRenderUpdateButton && (*/}
+      {/*  <Button*/}
+      {/*    fluid*/}
+      {/*    badge*/}
+      {/*    className={buildClassName('btn-update', updateButtonClassNames)}*/}
+      {/*    onClick={handleUpdateClick}*/}
+      {/*    isLoading={isTauriUpdateDownloading}*/}
+      {/*  >*/}
+      {/*    {lang('lng_update_telegram')}*/}
+      {/*  </Button>*/}
+      {/*)}*/}
       {shouldRenderForumPanel && (
         <ForumPanel
           isOpen={isForumPanelOpen}

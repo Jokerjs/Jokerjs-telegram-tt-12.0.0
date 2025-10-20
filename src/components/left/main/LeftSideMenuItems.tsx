@@ -155,20 +155,20 @@ const LeftSideMenuItems = ({
         icon="user"
         onClick={handleSelectMyProfile}
       >
-        {lang('MenuMyProfile')}
+        {lang('Profile')}
       </MenuItem>
       <MenuItem
         icon="saved-messages"
         onClick={handleSelectSaved}
       >
-        {lang('MenuSavedMessages')}
+        {lang('SavedMessages')}
       </MenuItem>
       {archiveSettings.isHidden && (
         <MenuItem
           icon="archive"
           onClick={onSelectArchived}
         >
-          <span className="menu-item-name">{lang('MenuArchivedChats')}</span>
+          <span className="menu-item-name">{lang('ArchivedChats')}</span>
           {archivedUnreadChatsCount > 0 && (
             <div className="right-badge">{archivedUnreadChatsCount}</div>
           )}
@@ -178,7 +178,7 @@ const LeftSideMenuItems = ({
         icon="group"
         onClick={onSelectContacts}
       >
-        {lang('MenuContacts')}
+        {lang('Contacts')}
       </MenuItem>
       {bots.map((bot) => (
         <AttachBotItem
@@ -194,7 +194,7 @@ const LeftSideMenuItems = ({
         icon="settings"
         onClick={onSelectSettings}
       >
-        {lang('MenuSettings')}
+        {lang('Settings')}
       </MenuItem>
       <MenuItem
         icon="darkmode"
@@ -219,14 +219,15 @@ const LeftSideMenuItems = ({
         icon="help"
         onClick={handleOpenTipsChat}
       >
-        {lang('MenuTelegramFeatures')}
+        {lang('TelegramFeatures')}
       </MenuItem>
-      <MenuItem
-        icon="bug"
-        onClick={handleBugReportClick}
-      >
-        {lang('MenuReportBug')}
-      </MenuItem>
+      {/*TODO: 提交bug*/}
+      {/*<MenuItem*/}
+      {/*  icon="bug"*/}
+      {/*  onClick={handleBugReportClick}*/}
+      {/*>*/}
+      {/*  {lang('MenuReportBug')}*/}
+      {/*</MenuItem>*/}
       {IS_BETA && (
         <MenuItem
           icon="permissions"
@@ -245,14 +246,15 @@ const LeftSideMenuItems = ({
           {lang('MenuSwitchToK')}
         </MenuItem>
       )}
-      {canInstall && (
-        <MenuItem
-          icon="install"
-          onClick={getPromptInstall()}
-        >
-          {lang('MenuInstallApp')}
-        </MenuItem>
-      )}
+      {/*TODO: 提交bug*/}
+      {/*{canInstall && (*/}
+      {/*  <MenuItem*/}
+      {/*    icon="install"*/}
+      {/*    onClick={getPromptInstall()}*/}
+      {/*  >*/}
+      {/*    {lang('MenuInstallApp')}*/}
+      {/*  </MenuItem>*/}
+      {/*)}*/}
     </>
   );
 };

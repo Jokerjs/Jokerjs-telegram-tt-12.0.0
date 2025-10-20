@@ -698,6 +698,15 @@ function useEffectBase(
     schedule();
   }
 
+  /** TODO: 内存溢出 */
+  const isFirstRun = !byCursor[cursor];
+
+  byCursor[cursor] = {
+    ...byCursor[cursor],
+    dependencies,
+    schedule,
+  };
+
   function setupSignals() {
     const cleanups = dependencies?.filter(isSignal).map((signal, i) => signal.subscribe(() => {
       if (debugKey) {
@@ -721,13 +730,7 @@ function useEffectBase(
 
   if (effectConfig) effectConfig.schedule = undefined; // Help GC
 
-  byCursor[cursor] = {
-    ...effectConfig,
-    dependencies,
-    schedule,
-  };
-
-  if (!effectConfig) {
+  if (!effectConfig || isFirstRun) {
     byCursor[cursor].releaseSignals = setupSignals();
   }
 

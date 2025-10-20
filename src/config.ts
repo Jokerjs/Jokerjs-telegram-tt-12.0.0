@@ -7,7 +7,8 @@ import type {
 } from './types';
 
 export const APP_CODE_NAME = 'A';
-export const APP_NAME = process.env.APP_NAME || `Telegram Web ${APP_CODE_NAME}`;
+{/*TODO: 名称*/}
+export const APP_NAME = process.env.APP_NAME || `CEO Telegram Web ${APP_CODE_NAME}`;
 
 export const PRODUCTION_HOSTNAME = 'web.telegram.org';
 export const PRODUCTION_URL = 'https://web.telegram.org/a';
@@ -133,7 +134,7 @@ export const PLAYBACK_RATE_FOR_AUDIO_MIN_DURATION = 20 * 60; // 20 min
 
 export const ANIMATION_LEVEL_CUSTOM = -1;
 export const ANIMATION_LEVEL_MIN = 0;
-export const ANIMATION_LEVEL_MED = 1;
+export const ANIMATION_LEVEL_MED = 0;
 export const ANIMATION_LEVEL_MAX = 2;
 export const ANIMATION_LEVEL_DEFAULT = ANIMATION_LEVEL_MED;
 

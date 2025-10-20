@@ -1926,6 +1926,9 @@ async function sendMessage<T extends GlobalState>(global: T, params: SendMessage
     global = updateUploadByMessageKey(global, messageKey, progress);
     setGlobal(global);
   } : undefined;
+
+  console.log('=======params', params)
+
   await callApi('sendMessage', params, progressCallback);
   if (progressCallback && currentMessageKey) {
     global = getGlobal();

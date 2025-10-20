@@ -82,7 +82,7 @@ export const INITIAL_SHARED_STATE: SharedState = {
     messageSendKeyCombo: 'enter',
     performance: INITIAL_PERFORMANCE_STATE_MAX,
     shouldSkipWebAppCloseConfirmation: false,
-    language: 'en',
+    language: 'zh-hans-raw',
     timeFormat: '24h',
     wasTimeFormatSetManually: false,
     isConnectionStatusMinimized: true,
