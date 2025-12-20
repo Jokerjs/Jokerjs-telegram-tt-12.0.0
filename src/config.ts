@@ -8,7 +8,7 @@ import type {
 
 export const APP_CODE_NAME = 'A';
 {/*TODO: 名称*/}
-export const APP_NAME = process.env.APP_NAME || `CEO Telegram Web ${APP_CODE_NAME}`;
+export const APP_NAME = process.env.APP_NAME || `HW Telegram Web ${APP_CODE_NAME}`;
 
 export const PRODUCTION_HOSTNAME = 'web.telegram.org';
 export const PRODUCTION_URL = 'https://web.telegram.org/a';

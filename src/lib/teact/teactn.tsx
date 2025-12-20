@@ -377,11 +377,10 @@ export function typify<
   };
 }
 
+(window as any).getGlobal = getUntypedGlobal;
+(window as any).setGlobal = setUntypedGlobal;
+(window as any).getActions = getUntypedActions;
 if (DEBUG) {
-  (window as any).getGlobal = getUntypedGlobal;
-  (window as any).setGlobal = setUntypedGlobal;
-  (window as any).getActions = getUntypedActions;
-
   document.addEventListener('dblclick', () => {
     // eslint-disable-next-line no-console
     console.warn(

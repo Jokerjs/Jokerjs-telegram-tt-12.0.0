@@ -264,7 +264,7 @@ export default function createConfig(
       }),
     ],
 
-    devtool: 'source-map',
+    devtool: APP_ENV === 'production' ? undefined : 'source-map',
 
     optimization: {
       splitChunks: {

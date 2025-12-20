@@ -3210,6 +3210,9 @@ async function loadChats(
         },
       },
     };
+    if (listType === 'active') {
+      global.chats.isFullyLoaded.isLoaded = true;
+    }
   }
 
   setGlobal(global);
